@@ -1,6 +1,6 @@
-파이썬 Curses로 스크롤(Scroll) 및 페이징(Paging) 기능 구현하기 [원본](https://github.com/mingrammer/python-curses-scroll-example)
+파이썬으로 스크롤(Scroll) 및 페이징(Paging) 기능 구현하기 [(원본)](https://github.com/mingrammer/python-curses-scroll-example)
 ===================================================================
-원작자 : [MinJae Kwon](https://github.com/mingrammer) [ref](https://mingrammer.com/how-to-implement-the-scroll-and-paging-in-python-curses/)
+원작자 : [MinJae Kwon](https://github.com/mingrammer) [ref](https://mingrammer.com/how-to-implement-the-scroll-and-paging-in-python-curses/)</br>
 재구현 : [Kim MinSu](https://github.com/alstn2468)
 -------------------------------------------------
 ## 스크롤 (Scroll)
