@@ -3,6 +3,8 @@
 원작자 : [MinJae Kwon](https://github.com/mingrammer) / [ref](https://mingrammer.com/how-to-implement-the-scroll-and-paging-in-python-curses/)</br>
 재구현 : [Kim MinSu](https://github.com/alstn2468)
 -------------------------------------------------
+![Python](images/Logo.png)
+
 ## 스크롤 (Scroll)
 전체 리스트에서의 현재 보여지는 윈도우의 최상단 위치와 현재 커서 위치를 기준으로</br>
 다음 커서의 위치를 계산하여 커서를 이동시키는 것이다. 이해하기 쉽게 실제 구현한 코드를 살펴보자.
