@@ -82,7 +82,7 @@ def scroll(self, direction):
 
 </br>
 
-[위로](#파이썬으로-스크롤scroll-및-페이징paging-기능-구현하기-원본)
+[(위로)](#파이썬으로-스크롤scroll-및-페이징paging-기능-구현하기)
 
 </br>
 
@@ -130,7 +130,7 @@ def paging(self, direction):
 
 </br>
 
-[위로](#파이썬으로-스크롤scroll-및-페이징paging-기능-구현하기-원본)/[스크롤](#스크롤-scroll)
+[(위로)](#파이썬으로-스크롤scroll-및-페이징paging-기능-구현하기) / [(스크롤)](#스크롤-scroll)
 
 </br>
 
