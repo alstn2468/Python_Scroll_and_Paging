@@ -13,7 +13,6 @@
 다음은 TUI 애플리케이션 실행 후 사용자로부터 키보드 입력을 받는 부분이다.</br>
 `KEY_UP`과 `KEY_DOWN` 입력을 받게 되면 스크롤을 수행하는 `scroll` 메서드를 `실행`하게된다. (UP=1, DOWN=-1)
 
-</br>
 
 ```
 # 사용자 입력을 대기하며 입력값에 따라 해당되는 메서드를 실행함
@@ -77,7 +76,6 @@ def scroll(self, direction):
         return
 ```
 
-</br>
 
 ### DEMO
 > 스크롤 업   : ↑</br>
@@ -101,7 +99,6 @@ def scroll(self, direction):
 - - -
 키보드 입력을 받는 부분에서 `KEY_LEFT`와 `KEY_RIGHT` 입력을 받게 되면 페이징을 수행하는 `paging` 메서드를 실행하게된다.
 
-</br>
 
 ```
 def paging(self, direction):
@@ -128,7 +125,6 @@ def paging(self, direction):
         return
 ```
 
-</br>
 
 ### DEMO
 > 페이징 업   : ←</br>
