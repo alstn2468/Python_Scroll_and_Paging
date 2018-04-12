@@ -10,7 +10,7 @@
 ### 구현
 - - -
 다음은 TUI 애플리케이션 실행 후 사용자로부터 키보드 입력을 받는 부분이다.</br>
-`KEY_UP`과 `KEY_DOWN` 입력을 받게 되면 스크롤을 수행하는 `scroll 메서드`를 `실행`하게된다. (UP=1, DOWN=-1)
+`KEY_UP`과 `KEY_DOWN` 입력을 받게 되면 스크롤을 수행하는 `scroll` 메서드를 `실행`하게된다. (UP=1, DOWN=-1)
 
 ```
 # 사용자 입력을 대기하며 입력값에 따라 해당되는 메서드를 실행함
@@ -72,7 +72,7 @@ def scroll(self, direction):
 ```
 
 ### DEMO
-> 스크롤 업 : ↑
+> 스크롤 업 : ↑</br>
 > 스크롤 다운 : ↓
 
 </br>
@@ -88,3 +88,40 @@ def scroll(self, direction):
 현재 커서가 `마지막 페이지`에 나타나는 항목의 리스트보다 `아래`에 위치하는 경우, 이 커서 위치를 `재조정`해줘야 한다는 것이다.
 
 ### 구현
+- - -
+키보드 입력을 받는 부분에서 `KEY_LEFT`와 `KEY_RIGHT` 입력을 받게 되면 페이징을 수행하는 `paging` 메서드를 실행하게된다.
+
+```
+def paging(self, direction):
+    # 윈도우의 상단 위치값과 현재 커서 위치로 현재 페이지와 다음 페이지를 계산
+    current_page = (self.top + self.current) // self.max_lines
+    next_page = current_page + direction
+
+    # 마지막 페이지에 도달 했을 때 현재 커서가 마지막 페이지에 나타나는 항목의 리스트보다 아래에 있는 경우,
+    # 현재 커서를 마지막 페이지 리스트의 마지막 항목 위치로 조정
+    if next_page == self.page:
+        self.current = min(self.current, self.bottom % self.max_lines - 1)
+
+    # 페이지 업
+    # 현재 페이지가 첫 페이지가 아닌 경우, 페이지 업이 가능
+    # 윈도우 상단의 위치는 음수가 될 수 없기 때문에 음수가 될 경우 0으로 조정
+    if (direction == self.UP) and (current_page > 0):
+        self.top = max(0, self.top - self.max_lines)
+        return
+
+    # 페이지 다운
+    # 현재 페이지가 마지막 페이지가 아닌 경우, 페이지 다운이 가능
+    if (direction == self.DOWN) and (current_page < self.page):
+        self.top += self.max_lines
+        return
+```
+
+### DEMO
+> 페이징 업 : ←</br>
+> 페이징 다운 : →
+
+</br>
+
+[위로](#파이썬으로-스크롤scroll-및-페이징paging-기능-구현하기-원본)/[스크롤](#스크롤-scroll)
+
+</br>
