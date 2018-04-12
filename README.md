@@ -137,5 +137,5 @@ def paging(self, direction):
 </br>
 
 ## LICENSE
-MIT LICENSE</br>
+[MIT LICENSE](LICENSE)</br>
 [(원본)](https://github.com/mingrammer/python-curses-scroll-example)
