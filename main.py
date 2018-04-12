@@ -1,5 +1,5 @@
 # main.py
-#
+
 import curses
 import curses.textpad
 
