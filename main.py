@@ -8,35 +8,34 @@ class Screen(object):
     DOWN = 1
 
     def __init__(self, items):
-        """ Initialize the screen window
-        Attributes
-            window: A full curses screen window
-            width: The width of `window`
-            height: The height of `window`
-            max_lines: Maximum visible line count for `result_window`
-            top: Available top line position for current page (used on scrolling)
-            bottom: Available bottom line position for whole pages (as length of items)
-            current: Current highlighted line number (as window cursor)
-            page: Total page count which being changed corresponding to result of a query (starts from 0)
-            ┌--------------------------------------┐
-            |1. Item                               |
-            |--------------------------------------| <- top = 1
-            |2. Item                               |
-            |3. Item                               |
-            |4./Item///////////////////////////////| <- current = 3
-            |5. Item                               |
-            |6. Item                               |
-            |7. Item                               |
-            |8. Item                               | <- max_lines = 7
-            |--------------------------------------|
-            |9. Item                               |
-            |10. Item                              | <- bottom = 10
-            |                                      |
-            |                                      | <- page = 1 (0 and 1)
-            └--------------------------------------┘
-        Returns
-            None
-        """
+        # Initialize the screen window
+        # Attributes
+        #     window: A full curses screen window
+        #     width: The width of `window`
+        #     height: The height of `window`
+        #     max_lines: Maximum visible line count for `result_window`
+        #     top: Available top line position for current page (used on scrolling)
+        #     bottom: Available bottom line position for whole pages (as length of items)
+        #     current: Current highlighted line number (as window cursor)
+        #     page: Total page count which being changed corresponding to result of a query (starts from 0)
+        #     ┌--------------------------------------┐
+        #     |1. Item                               |
+        #     |--------------------------------------| <- top = 1
+        #     |2. Item                               |
+        #     |3. Item                               |
+        #     |4./Item///////////////////////////////| <- current = 3
+        #     |5. Item                               |
+        #     |6. Item                               |
+        #     |7. Item                               |
+        #     |8. Item                               | <- max_lines = 7
+        #     |--------------------------------------|
+        #     |9. Item                               |
+        #     |10. Item                              | <- bottom = 10
+        #     |                                      |
+        #     |                                      | <- page = 1 (0 and 1)
+        #     └--------------------------------------┘
+        # Returns
+        #     None
         self.window = None
 
         self.width = 0
